@@ -19,7 +19,7 @@ Separate new venture. Standalone static storefront — Buy buttons go straight t
    imagery, NOT photos of the actual products. **Swap every product image for
    photos of the physical samples before any paid traffic runs** — selling from
    stock photos that don't match the shipped item invites returns and disputes.
-2. **Support email is a placeholder:** `support@northboundsupply.co` appears across
+2. **Support email is a placeholder:** `donmondemorrison+northbound@gmail.com` appears across
    the site (FAQ, footers, policies). The mailbox/domain must be live and monitored
    before launch, or replaced with the real support address everywhere.
 3. Stripe links are live payment links (created 2026-10-25) — confirm each link's
