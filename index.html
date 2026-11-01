@@ -292,6 +292,41 @@
     </div>
   </section>
 
+  <!-- KIT BUILDER -->
+  <section id="kit-builder" data-widget="kit-builder" class="kit-builder-band" aria-label="Build your travel kit">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <p class="eyebrow">Interactive kit builder</p>
+        <h2>Build your travel kit</h2>
+        <p>Pick a trip type and who&rsquo;s going. We&rsquo;ll put together a kit from the real collection &mdash; remove anything you don&rsquo;t need and watch the total update.</p>
+      </div>
+      <div class="kb-controls">
+        <fieldset class="kb-group">
+          <legend>Trip type</legend>
+          <div class="kb-pills" role="radiogroup" aria-label="Trip type">
+            <label class="kb-pill"><input type="radio" name="kb-trip" value="beach" checked><span>Beach</span></label>
+            <label class="kb-pill"><input type="radio" name="kb-trip" value="city"><span>City</span></label>
+            <label class="kb-pill"><input type="radio" name="kb-trip" value="adventure"><span>Adventure</span></label>
+            <label class="kb-pill"><input type="radio" name="kb-trip" value="business"><span>Business</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="kb-group">
+          <legend>Party size</legend>
+          <div class="kb-pills" role="radiogroup" aria-label="Party size">
+            <label class="kb-pill"><input type="radio" name="kb-party" value="solo" checked><span>Just me</span></label>
+            <label class="kb-pill"><input type="radio" name="kb-party" value="duo"><span>Two of us</span></label>
+          </div>
+        </fieldset>
+      </div>
+      <div class="kb-grid" data-kb-grid aria-live="polite"></div>
+      <div class="kb-summary">
+        <p class="kb-total-line">Kit total: <strong class="kb-total" data-kb-total>$0.00</strong> <span class="kb-count" data-kb-count></span></p>
+        <p class="kb-note">Each item checks out separately through its own secure payment link, so the total above is informational &mdash; there isn&rsquo;t one combined checkout for a kit.</p>
+      </div>
+      <noscript><p class="kb-note">The kit builder needs JavaScript &mdash; you can still shop the full collection in the grid above.</p></noscript>
+    </div>
+  </section>
+
   <!-- WHY US -->
   <section class="band-light" aria-label="Why Northbound">
     <div class="wrap">
@@ -390,5 +425,64 @@
 </footer>
 <script src="main.js"></script>
 <script>(function(){var mq=window.matchMedia("(prefers-reduced-motion: reduce)");var els=document.querySelectorAll(".rv");if(mq.matches){els.forEach(function(e){e.classList.add("in")});return}var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add("in");io.unobserve(en.target)}})},{threshold:.12});els.forEach(function(e){if(e.dataset.d)e.style.setProperty("--d",(e.dataset.d*0.07)+"s");io.observe(e)});var layers=document.querySelectorAll("[data-depth]");if(layers.length){var tick=false;window.addEventListener("scroll",function(){if(!tick){tick=true;requestAnimationFrame(function(){var y=window.scrollY;layers.forEach(function(l){var d=parseFloat(l.dataset.depth)||0;var o=Math.max(-14,Math.min(14,y*d*0.04));l.style.transform="translate3d(0,"+o+"px,0)"});tick=false})}},{passive:true})}})();</script>
+
+<script>
+(function(){
+"use strict";
+var CAT=[
+["Compression Packing Cubes 8-Pc Set",2499,"https://buy.stripe.com/7sY14mds34EGdBqgCd8sp08"],
+["Convertible Garment Duffel",3999,"https://buy.stripe.com/6oU6oG87J8UWgNCfy98sp09"],
+["Waterproof Dry Bag 10L",1999,"https://buy.stripe.com/5kQ5kC4Vx1sugNCclX8sp0a"],
+["Floating Waterproof Phone Pouch 2-Pack",1999,"https://buy.stripe.com/5kQdR89bN2wyeFueu58sp0b"],
+["Quick-Dry Travel Towel",5499,"https://buy.stripe.com/fZuaEW87J8UW0OEdq18sp0c"],
+["Utility Crossbody Bag",4999,"https://buy.stripe.com/aFaaEWfAb7QScxm85H8sp0d"],
+["Stainless Travel Tumbler 20oz",4499,"https://buy.stripe.com/3cIeVcew7b34eFugCd8sp0e"],
+["Packable Drawstring Day Bag",3499,"https://buy.stripe.com/28E8wObjV8UW2WM0Df8sp0f"],
+["Astronaut Galaxy Star Projector",2999,"https://buy.stripe.com/4gMdR8bjVgno0OEbhT8sp0g"],
+["KEMEI KM-032 Trimmer Kit",2999,"https://buy.stripe.com/9B614m87JefgfJyclX8sp0h"],
+["LED Sunset Projection Lamp",1399,"https://buy.stripe.com/9B6aEWcnZb34eFu5Xz8sp0i"],
+["Car RGB LED Footwell Light Kit",1499,"https://buy.stripe.com/cNi7sK5ZBgno7d299L8sp0j"],
+["Volcanic Flame Diffuser Humidifier",2499,"https://buy.stripe.com/7sY9AS3Rt6MO68YadP8sp0k"],
+["Interactive Cat Ball Toy",899,"https://buy.stripe.com/3cIeVc0Fh3AC1SIadP8sp0l"],
+["Magnetic Wristband Tool Holder",999,"https://buy.stripe.com/cNi14m0Fh8UW54U3Pr8sp0m"],
+["Pet Grooming Gloves \u2014 Pair",999,"https://buy.stripe.com/9B64gyafR0oq9la2Ln8sp0C"]];
+// Kit recipes by catalog index: base = trip essentials; duo = partner extras added for "Two of us".
+var KITS={
+beach:{base:[2,3,4],duo:[6,7]},
+city:{base:[5,0,6],duo:[7,1]},
+adventure:{base:[2,7,0],duo:[4,6]},
+business:{base:[1,0,6],duo:[5,9]}};
+var root=document.querySelector('[data-widget="kit-builder"]');
+if(!root)return;
+var grid=root.querySelector("[data-kb-grid]"),totalEl=root.querySelector("[data-kb-total]"),countEl=root.querySelector("[data-kb-count]");
+var removed={};
+function money(c){return "$"+(c/100).toFixed(2)}
+function picks(){
+  var trip=root.querySelector('input[name="kb-trip"]:checked').value;
+  var duo=root.querySelector('input[name="kb-party"]:checked').value==="duo";
+  var k=KITS[trip];return duo?k.base.concat(k.duo):k.base.slice();
+}
+function render(){
+  var list=picks(),total=0,kept=0;grid.innerHTML="";
+  list.forEach(function(i){
+    var p=CAT[i],off=!!removed[i];if(!off){total+=p[1];kept++}
+    var card=document.createElement("article");card.className="kb-card"+(off?" off":"");
+    var h=document.createElement("h3");h.textContent=p[0];card.appendChild(h);
+    var pr=document.createElement("p");pr.className="kb-price";pr.textContent=money(p[1]);card.appendChild(pr);
+    var row=document.createElement("div");row.className="kb-row";
+    var buy=document.createElement("a");buy.className="btn small";buy.href=p[2];buy.textContent="Buy";buy.setAttribute("aria-label","Buy "+p[0]+" for "+money(p[1]));row.appendChild(buy);
+    var tg=document.createElement("button");tg.type="button";tg.className="kb-toggle";tg.textContent=off?"Add back":"Remove";tg.setAttribute("aria-pressed",off?"true":"false");tg.setAttribute("aria-label",(off?"Add back ":"Remove ")+p[0]);
+    tg.addEventListener("click",function(){removed[i]=!removed[i];render()});
+    row.appendChild(tg);card.appendChild(row);grid.appendChild(card);
+  });
+  totalEl.textContent=money(total);
+  countEl.textContent=kept? "("+kept+" of "+list.length+" items in kit)":" (kit empty \u2014 add an item back)";
+}
+root.querySelectorAll('input[name="kb-trip"],input[name="kb-party"]').forEach(function(r){
+  r.addEventListener("change",function(){removed={};render()});
+});
+render();
+})();
+</script>
 </body>
 </html>
