@@ -16,10 +16,10 @@ img{max-width:100%;display:block}
 /* header */
 header{position:sticky;top:0;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);z-index:50}
 .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0;gap:16px}
-.logo{font-family:'Fraunces',Georgia,serif;font-size:1.35rem;font-weight:700;color:var(--navy);text-decoration:none}
+.logo{font-family:'Fraunces',Georgia,serif;font-size:1.35rem;font-weight:700;color:var(--navy);text-decoration:none;display:inline-flex;align-items:center;min-height:44px}
 .logo span{color:#8a6d3b}
 .nav-links{display:flex;gap:28px;list-style:none;margin:0;padding:0}
-.nav-links a{text-decoration:none;font-weight:500;font-size:.95rem}
+.nav-links a{text-decoration:none;font-weight:500;font-size:.95rem;display:inline-flex;align-items:center;min-height:44px}
 .nav-links a:hover{text-decoration:underline}
 .nav-toggle{display:none;background:none;border:1px solid var(--line);border-radius:10px;padding:11px 14px;min-height:44px;font:inherit;cursor:pointer}
 /* buttons */
@@ -85,7 +85,8 @@ footer a:hover{text-decoration:underline}
 .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:32px;margin-bottom:32px}
 .foot-grid h3{color:#fff;font-size:1rem;font-family:'Inter',sans-serif}
 .foot-grid ul{list-style:none;padding:0;margin:0}
-.foot-grid li{margin:8px 0}
+.foot-grid li{margin:2px 0}
+.foot-grid li a{display:inline-flex;align-items:center;min-height:44px}
 .fineprint{border-top:1px solid #28455f;padding-top:20px;font-size:.82rem;color:#8fa5b5}
 @media (max-width:900px){
   .grid{grid-template-columns:repeat(2,1fr)}
