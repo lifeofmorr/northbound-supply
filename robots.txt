@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lifeofmorr.github.io/northbound-supply/sitemap.xml
+Sitemap: https://northboundsupply.net/sitemap.xml
