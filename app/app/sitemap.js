@@ -1,17 +1,9 @@
-import { PRODUCTS } from "../lib/data";
-
+// Byte-faithful to the live sitemap.xml: exactly these four URLs, apex domain.
 export default function sitemap() {
-  const base = "https://northboundsupply.net";
-  const root = [
-    { url: `${base}/`, changeFrequency: "weekly", priority: 1 },
-    { url: `${base}/products.html`, changeFrequency: "weekly", priority: 0.9 },
-    { url: `${base}/policies.html`, changeFrequency: "monthly", priority: 0.5 },
-    { url: `${base}/gift-guide.html`, changeFrequency: "weekly", priority: 0.8 },
+  return [
+    { url: 'https://northboundsupply.net/' },
+    { url: 'https://northboundsupply.net/products.html' },
+    { url: 'https://northboundsupply.net/policies.html' },
+    { url: 'https://northboundsupply.net/gift-guide.html' },
   ];
-  const products = PRODUCTS.map((p) => ({
-    url: `${base}/products/${p.slug}`,
-    changeFrequency: "weekly",
-    priority: 0.7,
-  }));
-  return [...root, ...products];
 }

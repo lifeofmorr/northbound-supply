@@ -1,0 +1,859 @@
+{
+ "@context": "https://schema.org",
+ "@type": "ItemList",
+ "name": "Northbound Supply Co. Holiday Gift Guide 2026",
+ "itemListElement": [
+  {
+   "@type": "Product",
+   "name": "Compression Packing Cubes 8-Pc Set",
+   "image": "https://images.unsplash.com/photo-1547949003-9792a18a2601?w=900&q=80&auto=format&fit=crop",
+   "offers": {
+    "@type": "Offer",
+    "price": "24.99",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://buy.stripe.com/7sY14mds34EGdBqgCd8sp08",
+    "hasMerchantReturnPolicy": {
+     "@type": "MerchantReturnPolicy",
+     "applicableCountry": "US",
+     "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+     "merchantReturnDays": 30,
+     "returnMethod": "https://schema.org/ReturnByMail",
+     "returnFees": "https://schema.org/ReturnFeesCustomerResponsibility"
+    },
+    "shippingDetails": {
+     "@type": "OfferShippingDetails",
+     "shippingDestination": {
+      "@type": "DefinedRegion",
+      "addressCountry": "US"
+     },
+     "deliveryTime": {
+      "@type": "ShippingDeliveryTime",
+      "handlingTime": {
+       "@type": "QuantitativeValue",
+       "minValue": 5,
+       "maxValue": 10,
+       "unitCode": "DAY"
+      },
+      "transitTime": {
+       "@type": "QuantitativeValue",
+       "minValue": 0,
+       "maxValue": 0,
+       "unitCode": "DAY"
+      },
+      "businessDays": {
+       "@type": "OpeningHoursSpecification",
+       "dayOfWeek": [
+        "https://schema.org/Monday",
+        "https://schema.org/Tuesday",
+        "https://schema.org/Wednesday",
+        "https://schema.org/Thursday",
+        "https://schema.org/Friday"
+       ]
+      }
+     }
+    }
+   },
+   "description": "Compression zips squeeze soft clothes down so a week fits in a carry-on"
+  },
+  {
+   "@type": "Product",
+   "name": "Convertible Garment Duffel",
+   "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=900&q=80&auto=format&fit=crop",
+   "offers": {
+    "@type": "Offer",
+    "price": "39.99",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://buy.stripe.com/6oU6oG87J8UWgNCfy98sp09",
+    "hasMerchantReturnPolicy": {
+     "@type": "MerchantReturnPolicy",
+     "applicableCountry": "US",
+     "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+     "merchantReturnDays": 30,
+     "returnMethod": "https://schema.org/ReturnByMail",
+     "returnFees": "https://schema.org/ReturnFeesCustomerResponsibility"
+    },
+    "shippingDetails": {
+     "@type": "OfferShippingDetails",
+     "shippingDestination": {
+      "@type": "DefinedRegion",
+      "addressCountry": "US"
+     },
+     "deliveryTime": {
+      "@type": "ShippingDeliveryTime",
+      "handlingTime": {
+       "@type": "QuantitativeValue",
+       "minValue": 5,
+       "maxValue": 10,
+       "unitCode": "DAY"
+      },
+      "transitTime": {
+       "@type": "QuantitativeValue",
+       "minValue": 0,
+       "maxValue": 0,
+       "unitCode": "DAY"
+      },
+      "businessDays": {
+       "@type": "OpeningHoursSpecification",
+       "dayOfWeek": [
+        "https://schema.org/Monday",
+        "https://schema.org/Tuesday",
+        "https://schema.org/Wednesday",
+        "https://schema.org/Thursday",
+        "https://schema.org/Friday"
+       ]
+      }
+     }
+    }
+   },
+   "description": "Opens flat as a garment bag \u2014 a suit or dress travels on its hanger, crease-free"
+  },
+  {
+   "@type": "Product",
+   "name": "Astronaut Galaxy Star Projector",
+   "image": "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=900&q=80&auto=format&fit=crop",
+   "offers": {
+    "@type": "Offer",
+    "price": "29.99",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://buy.stripe.com/4gMdR8bjVgno0OEbhT8sp0g",
+    "hasMerchantReturnPolicy": {
+     "@type": "MerchantReturnPolicy",
+     "applicableCountry": "US",
+     "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+     "merchantReturnDays": 30,
+     "returnMethod": "https://schema.org/ReturnByMail",
+     "returnFees": "https://schema.org/ReturnFeesCustomerResponsibility"
+    },
+    "shippingDetails": {
+     "@type": "OfferShippingDetails",
+     "shippingDestination": {
+      "@type": "DefinedRegion",
+      "addressCountry": "US"
+     },
+     "deliveryTime": {
+      "@type": "ShippingDeliveryTime",
+      "handlingTime": {
+       "@type": "QuantitativeValue",
+       "minValue": 5,
+       "maxValue": 10,
+       "unitCode": "DAY"
+      },
+      "transitTime": {
+       "@type": "QuantitativeValue",
+       "minValue": 0,
+       "maxValue": 0,
+       "unitCode": "DAY"
+      },
+      "businessDays": {
+       "@type": "OpeningHoursSpecification",
+       "dayOfWeek": [
+        "https://schema.org/Monday",
+        "https://schema.org/Tuesday",
+        "https://schema.org/Wednesday",
+        "https://schema.org/Thursday",
+        "https://schema.org/Friday"
+       ]
+      }
+     }
+    }
+   },
+   "description": "Astronaut-shaped lamp projects a drifting starfield and nebula across walls and ceiling"
+  },
+  {
+   "@type": "Product",
+   "name": "KEMEI KM-032 Trimmer Kit",
+   "image": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=900&q=80&auto=format&fit=crop",
+   "offers": {
+    "@type": "Offer",
+    "price": "29.99",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://buy.stripe.com/9B614m87JefgfJyclX8sp0h",
+    "hasMerchantReturnPolicy": {
+     "@type": "MerchantReturnPolicy",
+     "applicableCountry": "US",
+     "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+     "merchantReturnDays": 30,
+     "returnMethod": "https://schema.org/ReturnByMail",
+     "returnFees": "https://schema.org/ReturnFeesCustomerResponsibility"
+    },
+    "shippingDetails": {
+     "@type": "OfferShippingDetails",
+     "shippingDestination": {
+      "@type": "DefinedRegion",
+      "addressCountry": "US"
+     },
+     "deliveryTime": {
+      "@type": "ShippingDeliveryTime",
+      "handlingTime": {
+       "@type": "QuantitativeValue",
+       "minValue": 5,
+       "maxValue": 10,
+       "unitCode": "DAY"
+      },
+      "transitTime": {
+       "@type": "QuantitativeValue",
+       "minValue": 0,
+       "maxValue": 0,
+       "unitCode": "DAY"
+      },
+      "businessDays": {
+       "@type": "OpeningHoursSpecification",
+       "dayOfWeek": [
+        "https://schema.org/Monday",
+        "https://schema.org/Tuesday",
+        "https://schema.org/Wednesday",
+        "https://schema.org/Thursday",
+        "https://schema.org/Friday"
+       ]
+      }
+     }
+    }
+   },
+   "description": "KEMEI KM-032 professional trimmer \u2014 sold under its real brand name, because it earned it",
+   "brand": {
+    "@type": "Brand",
+    "name": "KEMEI"
+   }
+  },
+  {
+   "@type": "Product",
+   "name": "LED Sunset Projection Lamp",
+   "image": "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=900&q=80&auto=format&fit=crop",
+   "offers": {
+    "@type": "Offer",
+    "price": "13.99",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://buy.stripe.com/9B6aEWcnZb34eFu5Xz8sp0i",
+    "hasMerchantReturnPolicy": {
+     "@type": "MerchantReturnPolicy",
+     "applicableCountry": "US",
+     "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+     "merchantReturnDays": 30,
+     "returnMethod": "https://schema.org/ReturnByMail",
+     "returnFees": "https://schema.org/ReturnFeesCustomerResponsibility"
+    },
+    "shippingDetails": {
+     "@type": "OfferShippingDetails",
+     "shippingDestination": {
+      "@type": "DefinedRegion",
+      "addressCountry": "US"
+     },
+     "deliveryTime": {
+      "@type": "ShippingDeliveryTime",
+      "handlingTime": {
+       "@type": "QuantitativeValue",
+       "minValue": 5,
+       "maxValue": 10,
+       "unitCode": "DAY"
+      },
+      "transitTime": {
+       "@type": "QuantitativeValue",
+       "minValue": 0,
+       "maxValue": 0,
+       "unitCode": "DAY"
+      },
+      "businessDays": {
+       "@type": "OpeningHoursSpecification",
+       "dayOfWeek": [
+        "https://schema.org/Monday",
+        "https://schema.org/Tuesday",
+        "https://schema.org/Wednesday",
+        "https://schema.org/Thursday",
+        "https://schema.org/Friday"
+       ]
+      }
+     }
+    }
+   },
+   "description": "Projects a warm sunset glow \u2014 golden hour on demand, any wall, any room"
+  },
+  {
+   "@type": "Product",
+   "name": "Volcanic Flame Diffuser Humidifier",
+   "image": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=900&q=80&auto=format&fit=crop",
+   "offers": {
+    "@type": "Offer",
+    "price": "24.99",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://buy.stripe.com/7sY9AS3Rt6MO68YadP8sp0k",
+    "hasMerchantReturnPolicy": {
+     "@type": "MerchantReturnPolicy",
+     "applicableCountry": "US",
+     "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+     "merchantReturnDays": 30,
+     "returnMethod": "https://schema.org/ReturnByMail",
+     "returnFees": "https://schema.org/ReturnFeesCustomerResponsibility"
+    },
+    "shippingDetails": {
+     "@type": "OfferShippingDetails",
+     "shippingDestination": {
+      "@type": "DefinedRegion",
+      "addressCountry": "US"
+     },
+     "deliveryTime": {
+      "@type": "ShippingDeliveryTime",
+      "handlingTime": {
+       "@type": "QuantitativeValue",
+       "minValue": 5,
+       "maxValue": 10,
+       "unitCode": "DAY"
+      },
+      "transitTime": {
+       "@type": "QuantitativeValue",
+       "minValue": 0,
+       "maxValue": 0,
+       "unitCode": "DAY"
+      },
+      "businessDays": {
+       "@type": "OpeningHoursSpecification",
+       "dayOfWeek": [
+        "https://schema.org/Monday",
+        "https://schema.org/Tuesday",
+        "https://schema.org/Wednesday",
+        "https://schema.org/Thursday",
+        "https://schema.org/Friday"
+       ]
+      }
+     }
+    }
+   },
+   "description": "Volcano-style mist ring with a flickering flame-effect light"
+  },
+  {
+   "@type": "Product",
+   "name": "Interactive Cat Ball Toy",
+   "image": "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=900&q=80&auto=format&fit=crop",
+   "offers": {
+    "@type": "Offer",
+    "price": "8.99",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://buy.stripe.com/3cIeVc0Fh3AC1SIadP8sp0l",
+    "hasMerchantReturnPolicy": {
+     "@type": "MerchantReturnPolicy",
+     "applicableCountry": "US",
+     "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+     "merchantReturnDays": 30,
+     "returnMethod": "https://schema.org/ReturnByMail",
+     "returnFees": "https://schema.org/ReturnFeesCustomerResponsibility"
+    },
+    "shippingDetails": {
+     "@type": "OfferShippingDetails",
+     "shippingDestination": {
+      "@type": "DefinedRegion",
+      "addressCountry": "US"
+     },
+     "deliveryTime": {
+      "@type": "ShippingDeliveryTime",
+      "handlingTime": {
+       "@type": "QuantitativeValue",
+       "minValue": 5,
+       "maxValue": 10,
+       "unitCode": "DAY"
+      },
+      "transitTime": {
+       "@type": "QuantitativeValue",
+       "minValue": 0,
+       "maxValue": 0,
+       "unitCode": "DAY"
+      },
+      "businessDays": {
+       "@type": "OpeningHoursSpecification",
+       "dayOfWeek": [
+        "https://schema.org/Monday",
+        "https://schema.org/Tuesday",
+        "https://schema.org/Wednesday",
+        "https://schema.org/Thursday",
+        "https://schema.org/Friday"
+       ]
+      }
+     }
+    }
+   },
+   "description": "Self-rolling ball that changes direction on contact \u2014 no app, no remote, just chase"
+  },
+  {
+   "@type": "Product",
+   "name": "Pet Grooming Gloves - Pair",
+   "image": "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=900&q=80&auto=format&fit=crop",
+   "offers": {
+    "@type": "Offer",
+    "price": "9.99",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://buy.stripe.com/9B64gyafR0oq9la2Ln8sp0C",
+    "hasMerchantReturnPolicy": {
+     "@type": "MerchantReturnPolicy",
+     "applicableCountry": "US",
+     "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+     "merchantReturnDays": 30,
+     "returnMethod": "https://schema.org/ReturnByMail",
+     "returnFees": "https://schema.org/ReturnFeesCustomerResponsibility"
+    },
+    "shippingDetails": {
+     "@type": "OfferShippingDetails",
+     "shippingDestination": {
+      "@type": "DefinedRegion",
+      "addressCountry": "US"
+     },
+     "deliveryTime": {
+      "@type": "ShippingDeliveryTime",
+      "handlingTime": {
+       "@type": "QuantitativeValue",
+       "minValue": 5,
+       "maxValue": 10,
+       "unitCode": "DAY"
+      },
+      "transitTime": {
+       "@type": "QuantitativeValue",
+       "minValue": 0,
+       "maxValue": 0,
+       "unitCode": "DAY"
+      },
+      "businessDays": {
+       "@type": "OpeningHoursSpecification",
+       "dayOfWeek": [
+        "https://schema.org/Monday",
+        "https://schema.org/Tuesday",
+        "https://schema.org/Wednesday",
+        "https://schema.org/Thursday",
+        "https://schema.org/Friday"
+       ]
+      }
+     }
+    }
+   },
+   "description": "One pair \u2014 left and right glove \u2014 with soft silicone bristles on both sides"
+  },
+  {
+   "@type": "Product",
+   "name": "Waterproof Dry Bag 10L",
+   "image": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1000&q=80&auto=format&fit=crop",
+   "offers": {
+    "@type": "Offer",
+    "price": "19.99",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://buy.stripe.com/5kQ5kC4Vx1sugNCclX8sp0a",
+    "hasMerchantReturnPolicy": {
+     "@type": "MerchantReturnPolicy",
+     "applicableCountry": "US",
+     "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+     "merchantReturnDays": 30,
+     "returnMethod": "https://schema.org/ReturnByMail",
+     "returnFees": "https://schema.org/ReturnFeesCustomerResponsibility"
+    },
+    "shippingDetails": {
+     "@type": "OfferShippingDetails",
+     "shippingDestination": {
+      "@type": "DefinedRegion",
+      "addressCountry": "US"
+     },
+     "deliveryTime": {
+      "@type": "ShippingDeliveryTime",
+      "handlingTime": {
+       "@type": "QuantitativeValue",
+       "minValue": 5,
+       "maxValue": 10,
+       "unitCode": "DAY"
+      },
+      "transitTime": {
+       "@type": "QuantitativeValue",
+       "minValue": 0,
+       "maxValue": 0,
+       "unitCode": "DAY"
+      },
+      "businessDays": {
+       "@type": "OpeningHoursSpecification",
+       "dayOfWeek": [
+        "https://schema.org/Monday",
+        "https://schema.org/Tuesday",
+        "https://schema.org/Wednesday",
+        "https://schema.org/Thursday",
+        "https://schema.org/Friday"
+       ]
+      }
+     }
+    }
+   },
+   "description": "Roll-top closure keeps spray, rain and sand off clothes, towels and snacks"
+  },
+  {
+   "@type": "Product",
+   "name": "Floating Waterproof Phone Pouch 2-Pack",
+   "image": "https://images.unsplash.com/photo-1519046904884-53103b34b206?w=1000&q=80&auto=format&fit=crop",
+   "offers": {
+    "@type": "Offer",
+    "price": "19.99",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://buy.stripe.com/5kQdR89bN2wyeFueu58sp0b",
+    "hasMerchantReturnPolicy": {
+     "@type": "MerchantReturnPolicy",
+     "applicableCountry": "US",
+     "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+     "merchantReturnDays": 30,
+     "returnMethod": "https://schema.org/ReturnByMail",
+     "returnFees": "https://schema.org/ReturnFeesCustomerResponsibility"
+    },
+    "shippingDetails": {
+     "@type": "OfferShippingDetails",
+     "shippingDestination": {
+      "@type": "DefinedRegion",
+      "addressCountry": "US"
+     },
+     "deliveryTime": {
+      "@type": "ShippingDeliveryTime",
+      "handlingTime": {
+       "@type": "QuantitativeValue",
+       "minValue": 5,
+       "maxValue": 10,
+       "unitCode": "DAY"
+      },
+      "transitTime": {
+       "@type": "QuantitativeValue",
+       "minValue": 0,
+       "maxValue": 0,
+       "unitCode": "DAY"
+      },
+      "businessDays": {
+       "@type": "OpeningHoursSpecification",
+       "dayOfWeek": [
+        "https://schema.org/Monday",
+        "https://schema.org/Tuesday",
+        "https://schema.org/Wednesday",
+        "https://schema.org/Thursday",
+        "https://schema.org/Friday"
+       ]
+      }
+     }
+    }
+   },
+   "description": "Two pouches per pack \u2014 yours, plus the spare that saves a friend's trip"
+  },
+  {
+   "@type": "Product",
+   "name": "Quick-Dry Travel Towel",
+   "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1000&q=80&auto=format&fit=crop",
+   "offers": {
+    "@type": "Offer",
+    "price": "54.99",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://buy.stripe.com/fZuaEW87J8UW0OEdq18sp0c",
+    "hasMerchantReturnPolicy": {
+     "@type": "MerchantReturnPolicy",
+     "applicableCountry": "US",
+     "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+     "merchantReturnDays": 30,
+     "returnMethod": "https://schema.org/ReturnByMail",
+     "returnFees": "https://schema.org/ReturnFeesCustomerResponsibility"
+    },
+    "shippingDetails": {
+     "@type": "OfferShippingDetails",
+     "shippingDestination": {
+      "@type": "DefinedRegion",
+      "addressCountry": "US"
+     },
+     "deliveryTime": {
+      "@type": "ShippingDeliveryTime",
+      "handlingTime": {
+       "@type": "QuantitativeValue",
+       "minValue": 5,
+       "maxValue": 10,
+       "unitCode": "DAY"
+      },
+      "transitTime": {
+       "@type": "QuantitativeValue",
+       "minValue": 0,
+       "maxValue": 0,
+       "unitCode": "DAY"
+      },
+      "businessDays": {
+       "@type": "OpeningHoursSpecification",
+       "dayOfWeek": [
+        "https://schema.org/Monday",
+        "https://schema.org/Tuesday",
+        "https://schema.org/Wednesday",
+        "https://schema.org/Thursday",
+        "https://schema.org/Friday"
+       ]
+      }
+     }
+    }
+   },
+   "description": "Full-size coverage that packs down to about the size of a paperback"
+  },
+  {
+   "@type": "Product",
+   "name": "Utility Crossbody Bag",
+   "image": "https://images.unsplash.com/photo-1502933691298-84fc14542831?w=1000&q=80&auto=format&fit=crop",
+   "offers": {
+    "@type": "Offer",
+    "price": "49.99",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://buy.stripe.com/aFaaEWfAb7QScxm85H8sp0d",
+    "hasMerchantReturnPolicy": {
+     "@type": "MerchantReturnPolicy",
+     "applicableCountry": "US",
+     "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+     "merchantReturnDays": 30,
+     "returnMethod": "https://schema.org/ReturnByMail",
+     "returnFees": "https://schema.org/ReturnFeesCustomerResponsibility"
+    },
+    "shippingDetails": {
+     "@type": "OfferShippingDetails",
+     "shippingDestination": {
+      "@type": "DefinedRegion",
+      "addressCountry": "US"
+     },
+     "deliveryTime": {
+      "@type": "ShippingDeliveryTime",
+      "handlingTime": {
+       "@type": "QuantitativeValue",
+       "minValue": 5,
+       "maxValue": 10,
+       "unitCode": "DAY"
+      },
+      "transitTime": {
+       "@type": "QuantitativeValue",
+       "minValue": 0,
+       "maxValue": 0,
+       "unitCode": "DAY"
+      },
+      "businessDays": {
+       "@type": "OpeningHoursSpecification",
+       "dayOfWeek": [
+        "https://schema.org/Monday",
+        "https://schema.org/Tuesday",
+        "https://schema.org/Wednesday",
+        "https://schema.org/Thursday",
+        "https://schema.org/Friday"
+       ]
+      }
+     }
+    }
+   },
+   "description": "Keeps passport, phone, cards and keys on your chest, not in a back pocket"
+  },
+  {
+   "@type": "Product",
+   "name": "Stainless Travel Tumbler 20oz",
+   "image": "https://images.unsplash.com/photo-1553531384-411a247ccd73?w=1000&q=80&auto=format&fit=crop",
+   "offers": {
+    "@type": "Offer",
+    "price": "44.99",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://buy.stripe.com/3cIeVcew7b34eFugCd8sp0e",
+    "hasMerchantReturnPolicy": {
+     "@type": "MerchantReturnPolicy",
+     "applicableCountry": "US",
+     "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+     "merchantReturnDays": 30,
+     "returnMethod": "https://schema.org/ReturnByMail",
+     "returnFees": "https://schema.org/ReturnFeesCustomerResponsibility"
+    },
+    "shippingDetails": {
+     "@type": "OfferShippingDetails",
+     "shippingDestination": {
+      "@type": "DefinedRegion",
+      "addressCountry": "US"
+     },
+     "deliveryTime": {
+      "@type": "ShippingDeliveryTime",
+      "handlingTime": {
+       "@type": "QuantitativeValue",
+       "minValue": 5,
+       "maxValue": 10,
+       "unitCode": "DAY"
+      },
+      "transitTime": {
+       "@type": "QuantitativeValue",
+       "minValue": 0,
+       "maxValue": 0,
+       "unitCode": "DAY"
+      },
+      "businessDays": {
+       "@type": "OpeningHoursSpecification",
+       "dayOfWeek": [
+        "https://schema.org/Monday",
+        "https://schema.org/Tuesday",
+        "https://schema.org/Wednesday",
+        "https://schema.org/Thursday",
+        "https://schema.org/Friday"
+       ]
+      }
+     }
+    }
+   },
+   "description": "Double-wall stainless steel keeps drinks hot or cold for hours, not minutes"
+  },
+  {
+   "@type": "Product",
+   "name": "Packable Drawstring Day Bag",
+   "image": "https://images.unsplash.com/photo-1622260614153-03223fb72052?w=1000&q=80&auto=format&fit=crop",
+   "offers": {
+    "@type": "Offer",
+    "price": "34.99",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://buy.stripe.com/28E8wObjV8UW2WM0Df8sp0f",
+    "hasMerchantReturnPolicy": {
+     "@type": "MerchantReturnPolicy",
+     "applicableCountry": "US",
+     "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+     "merchantReturnDays": 30,
+     "returnMethod": "https://schema.org/ReturnByMail",
+     "returnFees": "https://schema.org/ReturnFeesCustomerResponsibility"
+    },
+    "shippingDetails": {
+     "@type": "OfferShippingDetails",
+     "shippingDestination": {
+      "@type": "DefinedRegion",
+      "addressCountry": "US"
+     },
+     "deliveryTime": {
+      "@type": "ShippingDeliveryTime",
+      "handlingTime": {
+       "@type": "QuantitativeValue",
+       "minValue": 5,
+       "maxValue": 10,
+       "unitCode": "DAY"
+      },
+      "transitTime": {
+       "@type": "QuantitativeValue",
+       "minValue": 0,
+       "maxValue": 0,
+       "unitCode": "DAY"
+      },
+      "businessDays": {
+       "@type": "OpeningHoursSpecification",
+       "dayOfWeek": [
+        "https://schema.org/Monday",
+        "https://schema.org/Tuesday",
+        "https://schema.org/Wednesday",
+        "https://schema.org/Thursday",
+        "https://schema.org/Friday"
+       ]
+      }
+     }
+    }
+   },
+   "description": "Folds into its own pocket \u2014 takes up almost no room in your main bag"
+  },
+  {
+   "@type": "Product",
+   "name": "Car RGB LED Footwell Light Kit",
+   "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1000&q=80&auto=format&fit=crop",
+   "offers": {
+    "@type": "Offer",
+    "price": "14.99",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://buy.stripe.com/cNi7sK5ZBgno7d299L8sp0j",
+    "hasMerchantReturnPolicy": {
+     "@type": "MerchantReturnPolicy",
+     "applicableCountry": "US",
+     "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+     "merchantReturnDays": 30,
+     "returnMethod": "https://schema.org/ReturnByMail",
+     "returnFees": "https://schema.org/ReturnFeesCustomerResponsibility"
+    },
+    "shippingDetails": {
+     "@type": "OfferShippingDetails",
+     "shippingDestination": {
+      "@type": "DefinedRegion",
+      "addressCountry": "US"
+     },
+     "deliveryTime": {
+      "@type": "ShippingDeliveryTime",
+      "handlingTime": {
+       "@type": "QuantitativeValue",
+       "minValue": 5,
+       "maxValue": 10,
+       "unitCode": "DAY"
+      },
+      "transitTime": {
+       "@type": "QuantitativeValue",
+       "minValue": 0,
+       "maxValue": 0,
+       "unitCode": "DAY"
+      },
+      "businessDays": {
+       "@type": "OpeningHoursSpecification",
+       "dayOfWeek": [
+        "https://schema.org/Monday",
+        "https://schema.org/Tuesday",
+        "https://schema.org/Wednesday",
+        "https://schema.org/Thursday",
+        "https://schema.org/Friday"
+       ]
+      }
+     }
+    }
+   },
+   "description": "36-LED RGB strips for front and rear footwells \u2014 adhesive mount, USB plug, no wiring cuts"
+  },
+  {
+   "@type": "Product",
+   "name": "Magnetic Wristband Tool Holder",
+   "image": "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=1000&q=80&auto=format&fit=crop",
+   "offers": {
+    "@type": "Offer",
+    "price": "9.99",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://buy.stripe.com/cNi14m0Fh8UW54U3Pr8sp0m",
+    "hasMerchantReturnPolicy": {
+     "@type": "MerchantReturnPolicy",
+     "applicableCountry": "US",
+     "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+     "merchantReturnDays": 30,
+     "returnMethod": "https://schema.org/ReturnByMail",
+     "returnFees": "https://schema.org/ReturnFeesCustomerResponsibility"
+    },
+    "shippingDetails": {
+     "@type": "OfferShippingDetails",
+     "shippingDestination": {
+      "@type": "DefinedRegion",
+      "addressCountry": "US"
+     },
+     "deliveryTime": {
+      "@type": "ShippingDeliveryTime",
+      "handlingTime": {
+       "@type": "QuantitativeValue",
+       "minValue": 5,
+       "maxValue": 10,
+       "unitCode": "DAY"
+      },
+      "transitTime": {
+       "@type": "QuantitativeValue",
+       "minValue": 0,
+       "maxValue": 0,
+       "unitCode": "DAY"
+      },
+      "businessDays": {
+       "@type": "OpeningHoursSpecification",
+       "dayOfWeek": [
+        "https://schema.org/Monday",
+        "https://schema.org/Tuesday",
+        "https://schema.org/Wednesday",
+        "https://schema.org/Thursday",
+        "https://schema.org/Friday"
+       ]
+      }
+     }
+    }
+   },
+   "description": "Strong magnets embedded around the band hold screws, nails, bolts and drill bits"
+  }
+ ]
+}

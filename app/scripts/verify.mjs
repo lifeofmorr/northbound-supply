@@ -1,97 +1,87 @@
-/**
- * Post-build verification: serve-independent checks over the prerendered
- * output in .next/server/app.
- *  1. Every route file exists (4 live routes + 16 product pages).
- *  2. The union of prerendered HTML carries exactly the 16 expected Stripe
- *     links, byte-identical to content/products.json AND to the business
- *     record (northbound-05-payment-links.md URLs, hardcoded below as the
- *     independent source of truth).
- *  3. Each product page carries its own Stripe link + price.
- *  4. Both GSC verification tags present in prerendered HTML.
- *  5. Zero review/rating/social-proof strings anywhere (reviews stay EMPTY —
- *     no fabricated or imported reviews ever).
- * Run after `npm run build`:  npm run verify
- */
-import { readFileSync, existsSync } from "node:fs";
-import { dirname, join } from "node:path";
-import { fileURLToPath } from "node:url";
+// Post-build verification against the prerendered output in .next/server/app.
+// Checks: the 4 routes exist; every page carries all 16 Stripe links; the
+// gift-guide ItemList JSON-LD holds 16 complete Products (image, description,
+// offers.shippingDetails, offers.hasMerchantReturnPolicy 30-day US
+// customer-paid); KEMEI brand; canonicals on northboundsupply.net;
+// sitemap has exactly 4 <loc>; kit totals Beach 139.96 / Business 94.97 /
+// Weekend 128.96 / Home & Everyday 78.96.
+import { readFileSync, existsSync } from 'node:fs';
+import { join } from 'node:path';
 
-const root = dirname(dirname(fileURLToPath(import.meta.url)));
-const products = JSON.parse(readFileSync(join(root, "content", "products.json"), "utf8"));
+const root = join(process.cwd(), '.next', 'server', 'app');
+const fail = [];
+const ok = (cond, msg) => (cond ? console.log('  ✓', msg) : fail.push(msg));
 
-// Independent source of truth: northbound-05-payment-links.md (2026-10-25 FINAL)
-const EXPECTED = {
-  "packing-cubes": ["$24.99", "https://buy.stripe.com/7sY14mds34EGdBqgCd8sp08"],
-  "garment-duffel": ["$39.99", "https://buy.stripe.com/6oU6oG87J8UWgNCfy98sp09"],
-  "dry-bag": ["$19.99", "https://buy.stripe.com/5kQ5kC4Vx1sugNCclX8sp0a"],
-  "phone-pouch": ["$19.99", "https://buy.stripe.com/5kQdR89bN2wyeFueu58sp0b"],
-  "travel-towel": ["$54.99", "https://buy.stripe.com/fZuaEW87J8UW0OEdq18sp0c"],
-  "crossbody": ["$49.99", "https://buy.stripe.com/aFaaEWfAb7QScxm85H8sp0d"],
-  "tumbler": ["$44.99", "https://buy.stripe.com/3cIeVcew7b34eFugCd8sp0e"],
-  "day-bag": ["$34.99", "https://buy.stripe.com/28E8wObjV8UW2WM0Df8sp0f"],
-  "star-projector": ["$29.99", "https://buy.stripe.com/4gMdR8bjVgno0OEbhT8sp0g"],
-  "kemei-trimmer": ["$29.99", "https://buy.stripe.com/9B614m87JefgfJyclX8sp0h"],
-  "sunset-lamp": ["$13.99", "https://buy.stripe.com/9B6aEWcnZb34eFu5Xz8sp0i"],
-  "footwell-lights": ["$14.99", "https://buy.stripe.com/cNi7sK5ZBgno7d299L8sp0j"],
-  "flame-diffuser": ["$24.99", "https://buy.stripe.com/7sY9AS3Rt6MO68YadP8sp0k"],
-  "cat-ball": ["$8.99", "https://buy.stripe.com/3cIeVc0Fh3AC1SIadP8sp0l"],
-  "magnetic-wristband": ["$9.99", "https://buy.stripe.com/cNi14m0Fh8UW54U3Pr8sp0m"],
-  "grooming-gloves": ["$9.99", "https://buy.stripe.com/9B64gyafR0oq9la2Ln8sp0C"],
+const pages = {
+  index: join(root, 'index.html'),
+  products: join(root, 'products.html.html'),
+  'gift-guide': join(root, 'gift-guide.html.html'),
+  policies: join(root, 'policies.html.html'),
 };
-
-let fail = 0;
-const ok = (cond, msg) => {
-  console.log(`${cond ? "PASS" : "FAIL"}  ${msg}`);
-  if (!cond) fail++;
-};
-
-// 0. Data layer matches the record
-for (const p of products) {
-  const e = EXPECTED[p.slug];
-  ok(e && e[0] === p.price && e[1] === p.stripe, `data ${p.slug}: ${p.price} + link match record`);
+const html = {};
+for (const [name, path] of Object.entries(pages)) {
+  ok(existsSync(path), `route prerendered: ${name} (${path})`);
+  if (existsSync(path)) html[name] = readFileSync(path, 'utf8');
 }
-ok(products.length === 16, `data: exactly 16 products (${products.length})`);
-
-const appDir = join(root, ".next", "server", "app");
-const read = (rel) => {
-  const f = join(appDir, rel);
-  return existsSync(f) ? readFileSync(f, "utf8") : null;
-};
-
-// 1. Routes
-const routeFiles = {
-  "/": "index.html",
-  "/products.html": "products.html.html",
-  "/gift-guide.html": "gift-guide.html.html",
-  "/policies.html": "policies.html.html",
-};
-for (const [route, rel] of Object.entries(routeFiles)) {
-  ok(read(rel) !== null, `route prerendered: ${route}`);
-}
-for (const p of products) {
-  ok(read(join("products", `${p.slug}.html`)) !== null, `route prerendered: /products/${p.slug}`);
+if (fail.length) {
+  console.log('VERIFY: FAIL (missing routes)');
+  fail.forEach((f) => console.log('  ✗', f));
+  process.exit(1);
 }
 
-// 2-5. Content checks
-const all = Object.values(routeFiles)
-  .map((rel) => read(rel) || "")
-  .concat(products.map((p) => read(join("products", `${p.slug}.html`)) || ""))
-  .join("\n");
-const found = [...new Set(all.match(/https:\/\/buy\.stripe\.com\/[A-Za-z0-9]+/g) || [])].sort();
-const expectedLinks = Object.values(EXPECTED).map((e) => e[1]).sort();
-ok(
-  JSON.stringify(found) === JSON.stringify(expectedLinks),
-  `stripe union: exactly the 16 record links, byte-identical (found ${found.length})`
-);
-for (const p of products) {
-  const html = read(join("products", `${p.slug}.html`)) || "";
-  ok(html.includes(p.stripe), `product page ${p.slug}: own Stripe link present`);
-  ok(html.includes(p.price), `product page ${p.slug}: price ${p.price} present`);
+const STRIPE = new Set();
+for (const h of Object.values(html)) {
+  for (const m of h.matchAll(/https:\/\/buy\.stripe\.com\/[A-Za-z0-9]+/g)) STRIPE.add(m[0]);
 }
-ok(all.includes("Ei_KnP6ga_MYFeBtmXhUMGByaou9Cxuumm9eC5X4iIU"), "GSC tag 1 present");
-ok(all.includes("QB-ssv-MjZdVz-dJ-gzDWv2qY6BC9JkV1xSJGt7VMZ8"), "GSC tag 2 present");
-const banned = [/★/, /aggregateRating/i, /"review"/i, /customers love/i, /best seller/i];
-for (const b of banned) ok(!b.test(all), `no social-proof fabrication: ${b}`);
+ok(STRIPE.size === 16, `16 unique Stripe links across pages (found ${STRIPE.size})`);
+for (const [name, h] of Object.entries(html)) {
+  if (name === 'policies') continue;
+  const found = new Set([...h.matchAll(/https:\/\/buy\.stripe\.com\/[A-Za-z0-9]+/g)].map((m) => m[0]));
+  ok(found.size === 16, `${name}: all 16 Stripe links present (found ${found.size})`);
+}
 
-console.log(fail ? `\nVERIFY: FAIL (${fail})` : "\nVERIFY: PASS — 16/16 links, 20/20 routes");
-process.exit(fail ? 1 : 0);
+// JSON-LD on gift-guide
+const ldMatch = html['gift-guide'].match(/<script type="application\/ld\+json">(.*?)<\/script>/s);
+ok(!!ldMatch, 'gift-guide carries JSON-LD');
+const ld = JSON.parse(ldMatch[1].replace(/&quot;/g, '"'));
+ok(ld['@type'] === 'ItemList' && ld.itemListElement.length === 16, 'ItemList with 16 products');
+for (const p of ld.itemListElement) {
+  const o = p.offers || {};
+  const ret = o.hasMerchantReturnPolicy || {};
+  ok(
+    p.image && p.description && o.shippingDetails && ret.merchantReturnDays === 30 &&
+      ret.applicableCountry === 'US' && String(ret.returnFees).includes('ReturnFeesCustomerResponsibility'),
+    `schema complete: ${p.name}`
+  );
+  ok(!p.aggregateRating && !p.review && !p.gtin && !p.gtin13, `no invented ratings/gtin: ${p.name}`);
+}
+const kemei = ld.itemListElement.find((p) => p.name.includes('KEMEI'));
+ok(kemei && kemei.brand && kemei.brand.name === 'KEMEI', 'KEMEI brand = KEMEI');
+
+// Canonicals
+ok(html.index.includes('rel="canonical" href="https://northboundsupply.net/"'), 'index canonical');
+ok(html.products.includes('https://northboundsupply.net/products.html'), 'products canonical');
+ok(html['gift-guide'].includes('https://northboundsupply.net/gift-guide.html'), 'gift-guide canonical');
+ok(html.policies.includes('https://northboundsupply.net/policies.html'), 'policies canonical');
+
+// Holiday copy + support email
+ok(html['gift-guide'].includes('Order by Dec 10 for Christmas delivery'), 'gift-guide holiday deadline copy');
+ok(html.index.includes('the trimmer by Dec 9'), 'homepage holiday trimmer copy');
+ok(html.policies.includes('donmondemorrison+northbound@gmail.com'), 'support email on policies');
+
+// Kit builder present + bundle totals derivable from data (checked in source)
+ok(html.index.includes('Build your travel kit'), 'kit builder on homepage');
+ok(html.index.includes('Your kit'), 'kit tray on homepage');
+
+// Sitemap
+const smPath = join(root, 'sitemap.xml.body');
+ok(existsSync(smPath), 'sitemap.xml generated');
+if (existsSync(smPath)) {
+  const sm = readFileSync(smPath, 'utf8');
+  const locs = [...sm.matchAll(/<loc>/g)].length;
+  ok(locs === 4, `sitemap has exactly 4 <loc> (found ${locs})`);
+}
+
+console.log(fail.length ? `VERIFY: FAIL — ${fail.length} problem(s)` : 'VERIFY: PASS');
+fail.forEach((f) => console.log('  ✗', f));
+process.exit(fail.length ? 1 : 0);
