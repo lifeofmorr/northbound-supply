@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 160" role="img" aria-label="northbound logo">
+  <g transform="translate(20,20)">
+    <rect x="6" y="6" width="108" height="108" rx="24" fill="#FAF8F2"/>
+    <path d="M38 86 V34 L82 86 V34" fill="none" stroke="#0B2239" stroke-width="9" stroke-linecap="square"/></g>
+  <text x="168" y="76" font-family="'Playfair Display', Didot, 'Bodoni MT', Georgia, serif" font-weight="600" font-size="57" letter-spacing="-0.5" fill="#FAF8F2"><tspan fill="#FAF8F2">Northbound</tspan></text>
+  <text x="170" y="118" font-family="Inter, -apple-system, 'Helvetica Neue', Arial, sans-serif" font-weight="600" font-size="16.5" letter-spacing="4.6" fill="#FAF8F2">SUPPLY CO.</text>
+</svg>

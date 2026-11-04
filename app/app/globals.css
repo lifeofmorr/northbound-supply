@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ENTERPRISE-DESIGN-STANDARD §4/§9 expression for Northbound.
+   One motion only: a gentle reveal (opacity + 14px rise). Content is never
+   hidden without JS — the .rv state is armed by the Reveal component. */
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  @apply bg-ivory text-body font-sans antialiased;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.display {
+  @apply font-display text-ink;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+  text-wrap: balance;
+}
+.h-display {
+  font-size: clamp(39px, 5.4vw, 63px);
+  font-weight: 600;
+}
+.h-section {
+  font-size: clamp(29px, 3.6vw, 43px);
+  font-weight: 600;
+}
+.h-final {
+  font-size: clamp(30px, 4vw, 46px);
+  font-weight: 600;
+}
+.lead {
+  font-size: clamp(17.5px, 2vw, 19.5px);
+  line-height: 1.55;
+  @apply text-t2;
+}
+.eyebrow {
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  @apply text-accentdeep;
+}
+.eyebrow-dark {
+  @apply text-accent;
+}
+.hl {
+  @apply text-accentdeep;
+}
+.hl-dark {
+  @apply text-accent;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center rounded-pill font-semibold transition-colors;
+  font-size: 15px;
+  padding: 13px 26px;
+  min-height: 48px;
+}
+.btn-primary {
+  @apply bg-accent text-inkdeep hover:bg-sand;
+  background-color: #a98a56;
+  color: #fffdf8;
+}
+.btn-primary:hover {
+  background-color: #96793f;
+  color: #fffdf8;
+}
+.btn-navy {
+  background-color: #0b2239;
+  color: #faf8f2;
+}
+.btn-navy:hover {
+  background-color: #0e2c4a;
+}
+.btn-ghost {
+  @apply border border-line text-ink bg-transparent;
+  border-width: 1px;
+}
+.btn-ghost:hover {
+  @apply border-ink;
+}
+.btn-ghost-dark {
+  border: 1px solid #24405c;
+  color: #f5f1e8;
+  background: transparent;
+}
+.btn-ghost-dark:hover {
+  border-color: #a98a56;
+}
+.btn-small {
+  font-size: 13.5px;
+  padding: 9px 18px;
+  min-height: 40px;
+}
+
+.card-hover {
+  transition: box-shadow 0.35s ease;
+}
+.card-hover:hover {
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.07);
+}
+
+/* Reveal-on-scroll (§9) — opt-in via .rv, armed by JS only. */
+.rv {
+  opacity: 1;
+}
+.js-rv .rv {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+.js-rv .rv.in {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .js-rv .rv {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Kit-builder pill radios */
+.kb-pill input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.kb-pill span {
+  @apply inline-flex items-center rounded-pill border border-linedark text-ondark2 cursor-pointer;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 9px 18px;
+  min-height: 40px;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+.kb-pill input:checked + span {
+  background-color: #a98a56;
+  border-color: #a98a56;
+  color: #071829;
+}
+.kb-pill input:focus-visible + span {
+  outline: 2px solid #a98a56;
+  outline-offset: 2px;
+}
+.tk-pill span {
+  border-color: #d2d2d7;
+  color: #424245;
+}
+.tk-pill input:checked + span {
+  background-color: #0b2239;
+  border-color: #0b2239;
+  color: #faf8f2;
+}
